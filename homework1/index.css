@@ -1,0 +1,36 @@
+
+.addButton{
+background-color: rgb(50, 152, 216);
+width: 80px;
+height: 50px;
+border-radius: 20px;
+margin-left: 20px;
+}
+input{
+    height: 50px;
+    width: 280px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+    color: rgb(90, 97, 3);
+}
+.add{
+    margin-top:100px;
+    margin-left: 400px;
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    margin-left: 400px;
+   
+}
+li button{
+    margin:20px;
+    color:red;
+}
+h1{
+    color:green;
+    font-size: 50px;
+    margin-left:500px;
+    margin-top:150px;
+}
