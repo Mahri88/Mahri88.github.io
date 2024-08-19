@@ -12,36 +12,26 @@
 // .catch((error) => console.log(error));
 
 // });
-
-
-const  getUser = function () {
-    fetch("https://randomuser.me/api")
+const getUser =document.querySelector( ".main") 
+function getRandomPeople(){
+    fetch("https://randomuser.me/api/?results=10")
     .then((result) => result.json())
     .then((data) => {
-        const {
-            picture:{large},
-            name:{title, first, last},
-            email,
-            cell,
-            city,
-            country,
-          
-        }= data.results[0];
-        
+        const  people =data.results 
+        people.forEach(person => {
         const usertemplate =`<div class="user-card">
-    <img src="${large}" alt="Profile picters" class="profile-pic">
-    <h2 class="user-name"> ${ title} ${first} ${last}</h2>
-    <p class="user-bio">  </p>
-       <p class="locatoin"> <i class="fa-sharp fa-solid fa-location-dot"></i> Location: ${city } ${country}</p>
+    <img src="${person.picture.large}" alt="Profile picters" class="profile-pic">
+    <h2 class="user-name"> ${person.name.first} ${person.name.last}</h2>
+       <p class="locatoin"> <i class="fa-sharp fa-solid fa-location-dot"></i> Location: ${person.location.country}, ${person.location.state}, ${person.location.city}</p>
     <div class=" contact-info">
-        <p class="user-email"><i class="fa-sharp fa-regular fa-envelope"></i> Email: ${email}</p>
-        <p> <i class="fa-sharp fa-solid fa-phone"></i>  <strong>Phone number: ${cell}</strong></p>
+        <p class="user-email"><i class="fa-sharp fa-regular fa-envelope"></i> Email: ${person.email}</p>
+        <p> <i class="fa-sharp fa-solid fa-phone"></i>  <strong>Phone number: ${person.phone}</strong></p>
     </div>
 </div>
 `;
-document.body.insertAdjacentHTML("beforeend",usertemplate);
-    })
-.catch((error) => console.log(error));
-    
-};
-getUser();
+getUser.insertAdjacentHTML("beforeend",usertemplate);
+})
+})  
+.catch((error) => console.log(error))
+}
+getRandomPeople();
