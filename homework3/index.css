@@ -20,6 +20,11 @@ flex-wrap: wrap;
     margin-left:100px;
  
 }
+.user-card :hover{
+    cursor: pointer;
+background: rgb(221, 214, 204);
+
+}
 img{
     border-radius: 50px;
 }
