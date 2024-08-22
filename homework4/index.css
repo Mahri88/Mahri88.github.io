@@ -49,19 +49,47 @@ select{
     justify-content: space-between;
 }
 .buttons button{
-    color:#100d0d;
+    color:#fefdff;
     padding:10px 20px;
     cursor: pointer;
-    background-color: rgb(202, 224, 163);
+    background-color: rgb(61, 129, 189);
     border-radius: 20px;
 
 }
-.buttons button:hover{
-    background-color:rgb(58, 100, 24); ;
+#calculate:hover{
+    background-color:rgb(108, 166, 205); ;
 }
-.screen{
+#screen{
     height: 150px;
-    border: 1px solid rgb(14, 28, 14);
+    border: 1px solid rgb(224, 237, 224);
     border-radius: 20px;
     background-color: #fff;
 }
+#resultDiv {
+    height: 150px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+  }
+  
+  #result {
+    font-size: 20px;
+  
+    color: #0a6d1c;
+  }
+  #clear:hover{
+    background-color:rgb(108, 166, 205); 
+  }
+  #clear{
+    margin-top:50px;
+    background-color: rgb(234, 185, 150);
+    border-radius: 20px;
+  }
+  #calculate{
+    background-color: rgb(234, 185, 150);
+    border-radius: 20px;
+  }
+  

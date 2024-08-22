@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework4</title>
     <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/e26844cb60.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/e26844cb60.js" crossorigin="anonymous"></script> -->
 </head>
-<body>
+<body> 
 <div class="main">
     <div class="mainDiv">
-        <p>Enter Amount</p>
-        <input class="number" type="text"/>
-        <h3>From:</h3>
+        <label for="title">Value to Convert</label>
+<input id="amount" type="number">
+        <label for="title"><i>From:</i></label>
         <select id="from">
             <option value=""disabled selected>Select a currency</option>
-           
             <option value="usd">Dollar</option>
             <option value="euro">Euro</option>
             <option value="som">Som</option> 
@@ -24,8 +23,8 @@
             <option value="uah">uah</option> 
         </select>
 
-        <h3>To:</h3>
-        <select  id=" to">
+        <label for="title"><i>To:</i></label>
+        <select id="to">
             <option value=""disabled selected>Select a currency</option>
             <option value="usd">Dollar</option>
             <option value="euro">Euro</option>
@@ -35,12 +34,13 @@
             <option value="uah">uah</option> 
         </select>
     <!-- </div> -->
-    <div class="buttons">
-     <button>Clear</button>
-     <button>Convert</button>
+    <div id="resultDiv">
+        <h1 id="result"></h1>
+     <button id ="clear">Clear</button>
+     <button id="calculate">Calculate</button>
             </div>
         </div>
-     <div class="screen" ></div>
+    
 
     </div>
 
