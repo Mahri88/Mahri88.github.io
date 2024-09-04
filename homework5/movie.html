@@ -6,139 +6,39 @@
     <title>Document</title>
    
 </head>
-<style>
-    body{
-        background-color: rgba(30,32,40,0.982);
-    }
-    .chooseMovie{
-        display: flex;
-        gap:30px;
-        align-items: center;
-        width: 80%;
-        padding-left: 100px;
-    }
-    .description{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    p{
-        margin:10px;
-        color:white;
-    }
-    h2{
-        margin:10px;
-        color:white; 
-    }
-    h1{
-        padding-left:10px;
-        color:white;   
-    }
-    </style>
+
 <body>
-    <h1>Favorites Movies</h1>
-    <div class="container"></div>
-  
+    
+    <h1>Movie page</h1>
+
+    <img src="" alt="">
+    <h2></h2>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-
-
     <script>
-        //  const movieId = location.search.slice(9);
-        //  console.log(movieId);
-        // const movieId = location.search.split("=")[1];
+        // const movieId = location.search.slice(9);
+        // console.log(movieId);
+        const movieId = location.search.split("=")[1];
 
-const divEl =document.querySelector(".container");
+
         const imagePrefix = "https://image.tmdb.org/t/p/w500/";
-const genres =""
-function displayFavorites(){
-    const favorites =JSON.parse(localStorage.getItem("favorites")) || [];
-    if(favorites.lenght === 0){
-        divEl.innerHTML="<p>No Fvorite movies added yet.</p>";
 
-    } else{
-        favorites.forEach((movie) =>{
-            const movieCard =`div class="card">
-            <img src="${imagePrefix + movie.id}">${movie.title}</button>
-            <button class ="buttonRemove" data-movie-id="${movie.id}">Remove from favorites</button>
-            </div>
-                 </div>`;
-                 divEl.insertAdjacentElement("afterbegin",movieCard);
-
-        })
-    }
-}
-//         async function getMovie() {
+        async function getMovie() {
             try {
-                const {data} = await axios(`https://api.themoviedb.org/3/movie/${movieId}?api_key=48c5e0a2600d0e6ae88a8f7fcbfe270b`);
-
+                const {data} = await axios(`https://api.themoviedb.org/3/movie/${movieId}?api_key=48c5e0a2600d0e6ae88a8f7fcbfe270b`)
                 console.log(data);
-
                 document.querySelector("h2").textContent = data.title;
-                document.querySelector("img").src = imagePrefix + data.backdrop_path;
-                document.querySelector(".overview").textContent = data.overview;
-                document.querySelector (".genres").textContent =data.genres.name;
-                document.querySelector (".release-date").textContent =data.release_date;
-                document.querySelector(".vote-average").textContent =data.average;
-                document.querySelector(".runtime").textContent =data.runtime;
+                document.querySelector("img").src = imagePrefix + data.poster_path;
             } catch (error) {
                 console.log(error);
             }
-        
+        }
         
         getMovie();
-        async function getTrailer(){
-        try{
-            const {data} =await axios(
-                `https://api.themoviedb.org/3/movie/${movieId}/video?api_key=48c5e0a2600d0e6ae88a8f7fcbfe270b`
-            );
-            console.log(data);
-            
-        }catch(error){
-            console.error(error);
-        }
-            
-        }
-        getTrailer()
 
-   
-
-function showMovies(movies) {
-    main.innerHTML = '';
-
-    movies.forEach((movie) => {
-        const { id, title, poster_path, vote_average, overview } = movie;
-
-        const movieEl = document.createElement('div');
-        movieEl.classList.add('movie');
-
-        movieEl.innerHTML = `
-            <img src="${IMG_PATH + poster_path}" alt="${title}">
-            <div class="movie-info">
-                <h3>${title}</h3>
-                <span class="${getClassByRate(vote_average)}">${vote_average}</span>
-              
-            </div>
-        `;
-
-         //Add click event listener to navigate to movie details page
-        movieEl.addEventListener('click', () => {
-            window.location.href = `movie.html?Id=${id}`;
-        });
-
-        main.appendChild(movieEl);
-    });
-
-    // Add event listeners to "Add to Favorites" buttons
-    const favoriteButtons = document.querySelectorAll('.btn');
-    favoriteButtons.forEach((btn) => {
-        btn.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent the click event from also triggering navigation
-            const movieId = btn.getAttribute('data-id');
-            addToFavorites(movieId);
-        });
-    });
-}
-
-</script>
+    </script>
+</body>
+</html>

@@ -161,11 +161,19 @@ const movies = [
   },
 ];
 
+
+
+
+
+
+
+  
 const divElement = document.querySelector("div");
 function renderingMovies(){
   movies.forEach(movie => {
       const block = `<div class="blocks">
-      <div id="headerButton"><h1>${movie.title}</h1></div>
+      <div id="headerButton"><h1>${movie.title}</h1>
+      <i class="fa-solid fa-star star"></i></div>
       <p>Release date:${movie.release_date}</p>
       <p>Rating: ${movie.vote_average}</p>
       <img src="${movie.poster_path}"/>
@@ -175,9 +183,10 @@ function renderingMovies(){
       divElement.insertAdjacentHTML("afterbegin", block);
       
   });
-  const addButtons = document.querySelectorAll();
+  const addButtons = document.querySelectorAll(".star");
 addButtons.forEach(button => {
   button.addEventListener("click", function() {
+   
       const movieTitle = this.closest(".blocks").querySelector("h1").textContent;
       addToFavorites(movieTitle);
       
@@ -187,20 +196,28 @@ addButtons.forEach(button => {
 renderingMovies()
 
 function addToFavorites(movieTitle) {
-  const favoritesList = document.querySelector("button"); 
-  const deleteButton = document.createElement("input");
+  const favoritesList = document.querySelector("#favoritesList"); 
+  const deleteButton = document.createElement("button");
   deleteButton.textContent = "Remove";
   deleteButton.addEventListener("click", function(){
-  ;
+    listItem.style.display = "none";
   })
   const listItem = document.createElement("li");
   listItem.textContent = movieTitle;
   favoritesList.appendChild(listItem);
-  listItem.appendChild(deleteButton);
+  listItem.appendChild(deleteButton);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-
-}
-
-  
-
-

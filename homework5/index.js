@@ -510,8 +510,8 @@ function showMovies(data) {
 
             <div class="movie-info">
                 <h3>${title}</h3>
-                <span class="${getColor(vote_average)}">${vote_average}</span>
-            </div>
+                <span class="${getColor(vote_average.toFixed(1))}">${vote_average.toFixed(1)}</span>
+                
 
             <div class="overview">
 

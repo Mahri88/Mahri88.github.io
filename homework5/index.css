@@ -280,7 +280,7 @@ main{
     left:0;
     right:0;
     bottom:0;
-    background-color: #fff;
+    background-color: rgb(71, 71, 49);
     padding: 1rem;
     max-height: 100%;
     transform:translateY(101%);
