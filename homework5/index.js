@@ -299,6 +299,7 @@ const API_KEY = 'api_key=48c5e0a2600d0e6ae88a8f7fcbfe270b';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+const movieDetailsUrl = `${BASE_URL}/movie/`;
 const searchURL = BASE_URL + '/search/movie?'+API_KEY;
 
 const genres = [

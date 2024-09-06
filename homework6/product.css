@@ -1,0 +1,234 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(242, 240, 240);
+  }
+  
+  .mainHeader {
+    display: flex;
+    height: 65px;
+    gap: 5px;
+  }
+  
+  .mainFirst {
+    display: flex;
+    height: 50px;
+    width: 20%;
+    background-color: white;
+    align-items: center;
+    box-shadow: 3px 3px 5px #a6a6a6, -2px -2px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .mainSecond {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 50px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 3px 3px 5px #a6a6a6, -2px -2px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .mainSecond input {
+    border: 0px;
+    margin-left: 10px;
+    font-size: 18px;
+    margin-left: 20px;
+    width: 75%;
+    height: 30%;
+  }
+  
+  .mainSecond input::placeholder {
+    color: #a6a6a6;
+    font-size: 18px;
+  }
+  
+  .search {
+    position: absolute;
+    left: 21%;
+    top: 2.4%;
+  }
+  
+  .userAvatar {
+    width: 50px;
+    height: 40px;
+    border-radius: 60px;
+  }
+  
+  #avatarDiv {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .sideBar {
+    margin-top: -5px;
+    width: 15%;
+    height: 750px;
+    background-color: white;
+    box-shadow: 3px 3px 5px #a6a6a6, -2px -2px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .barItem {
+    display: flex;
+    gap: 5%;
+    justify-content: start;
+    align-items: center;
+    text-decoration: none;
+    color: #8d8d8d;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  .barItems {
+    padding: 10% 0% 0px 10%;
+  }
+  
+  .line {
+    height: 2px;
+    width: 100%;
+    background-color: #d9d8d8;
+    margin-top: 5%;
+  }
+  
+  main {
+    display: flex;
+  }
+  
+  .mainContent {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  
+  .mainContentTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+  }
+  
+  .headerTop {
+    font-size: 30px;
+  }
+  
+  .buttuns {
+    width: 140px;
+    height: 35px;
+    border-radius: 8px;
+    border: 0px;
+  }
+  
+  .buttonWhite {
+    background-color: white;
+    border: 1px solid #cdcccc;
+  }
+  
+  .buttonBlue {
+    background-color: #3069ea;
+    color: white;
+  }
+  
+  .mainContentCenter {
+    border-radius: 8px;
+    width: 95%;
+    background-color: white;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 12px 15px 12px;
+    box-shadow: 3px 3px 5px #a6a6a6, -2px -2px 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  .mainContentCenter input::placeholder {
+    color: #a6a6a6;
+  }
+  
+  .mainContentCenter input {
+    width: 400px;
+    border: 1px solid #d3d1d1;
+    border-radius: 8px;
+  }
+  
+  .line2 {
+    width: 96.7%;
+    height: 1px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: #d8d7d7;
+  }
+  
+  .mainConteinerBottom {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    width: 95%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 12px 15px 12px;
+    box-shadow: 3px 3px 5px #a6a6a6, -2px -2px 3px rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+  }
+  
+  .topLevel {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .bottomLevel {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .item {
+    width: 20%;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #949191;
+    border-radius: 8px;
+  }
+  
+  .item img {
+    width: 70%;
+    margin-top: 3px;
+  }
+  
+  .itemName {
+    color: #5b5a5a;
+    font-size: 20px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+  }
+  
+  .price {
+    font-size: 14px;
+    margin-bottom: 7px;
+  }
+  
+  .itemButtons {
+    margin-bottom: 8px;
+  }
+  
+  .itemButton {
+    background-color: white;
+    border: 1px solid #a6a6a6;
+    border-radius: 4px;
+    height: 25px;
+    width: 100px;
+  }
+  
+  .delete {
+    color: rgb(245, 63, 63);
+  }
+  .item-button{
+  display: flex;
+  justify-content: end;
+  margin-right: 80px;
+  margin-top: 15px;
+  }
